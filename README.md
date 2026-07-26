@@ -27,15 +27,15 @@ These are placeholders for the first public release. Replace the files with actu
 
 ### Explore an Ossie ontology
 
-![Placeholder for the Ossie ontology tree](Images/ossie-ontology-view.svg)
+![Placeholder for the Ossie ontology tree](Images/ossie-ontology-view.png)
 
 ### Inspect the source or generated YAML
 
-![Placeholder for the YAML editor](Images/yaml-view.svg)
+![Placeholder for the YAML editor](Images/yaml-view.png)
 
 ### Review the converted Fact-Based Model
 
-![Placeholder for the converted FBM view](Images/fbm-model-view.svg)
+![Placeholder for the converted FBM view](Images/fbm-model-view.png)
 
 ## Why this project exists
 
