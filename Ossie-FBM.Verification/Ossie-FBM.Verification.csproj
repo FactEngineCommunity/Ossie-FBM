@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FBM-Ossie\FBM-Ossie.vbproj" />
+    <ProjectReference Include="..\FBM-Ossie\Ossie-FBM.vbproj" />
   </ItemGroup>
 
 </Project>
