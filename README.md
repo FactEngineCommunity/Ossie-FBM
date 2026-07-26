@@ -1,11 +1,11 @@
-# FBM-Ossie
+# Ossie-FBM
 
 **A working bridge between Fact-Based Modelling and Apache Ossie.**
 
-FBM-Ossie is an independent .NET viewer and two-way conversion experiment for [Fact-Based Modelling](https://www.factengine.ai/index.php/articles/224-fact-based-modelling) (FBM/ORM) and the [Apache Ossie](https://ossie.apache.org/) semantic interchange format.
+Ossie-FBM is an independent .NET viewer and two-way conversion experiment for [Fact-Based Modelling](https://www.factengine.ai/index.php/articles/224-fact-based-modelling) (FBM/ORM) and the [Apache Ossie](https://ossie.apache.org/) semantic interchange format.
 
 ```text
-Fact-Based Model (.fbm)  ⇄  FBM-Ossie  ⇄  Apache Ossie ontology (.yaml)
+Fact-Based Model (.fbm)  ⇄  Ossie-FBM  ⇄  Apache Ossie ontology (.yaml)
 ```
 
 Import a model, inspect both representations, convert it, and see which semantics survive the journey.
@@ -64,20 +64,20 @@ The Windows application can:
 From the repository root:
 
 ```powershell
-dotnet restore .\FBM-Ossie.slnx
-dotnet build .\FBM-Ossie.slnx --configuration Release
+dotnet restore .\Ossie-FBM.slnx
+dotnet build .\Ossie-FBM.slnx --configuration Release
 ```
 
 Run the dependency-free verification suite:
 
 ```powershell
-dotnet run --project .\FBM-Ossie.Verification\FBM-Ossie.Verification.csproj --configuration Release
+dotnet run --project .\Ossie-FBM.Verification\Ossie-FBM.Verification.csproj --configuration Release
 ```
 
 Run the application:
 
 ```powershell
-dotnet run --project .\FBM-Ossie.WinForms\FBM-Ossie.WinForms.vbproj
+dotnet run --project .\Ossie-FBM.WinForms\Ossie-FBM.WinForms.vbproj
 ```
 
 The current Release build has been verified with .NET SDK 10.0.302.
@@ -87,7 +87,7 @@ The current Release build has been verified with .NET SDK 10.0.302.
 After launching the application:
 
 1. Select **File → Import → Ossie YAML file**.
-2. Open `FBM-Ossie\Example\flights.yaml`.
+2. Open `Ossie-FBM\Example\flights.yaml`.
 3. Explore the **Ossie**, **.YAML Text**, and **Fact-Based Model (ORM)** tabs.
 4. Use **File → Export → as .fbm Fact-Based Model** to inspect the generated model in compatible FBM tooling.
 
@@ -97,10 +97,10 @@ The `CinemaBookings.fbm` example exercises a broader FBM model, including object
 
 | Path | Purpose |
 | --- | --- |
-| `FBM-Ossie/` | .NET Standard Ossie document model plus YAML parsing and serialisation |
-| `FBM-Ossie.WinForms/` | Windows viewer and FBM ↔ Ossie mapping implementation |
-| `FBM-Ossie.Verification/` | Executable checks for YAML detection, parsing, and round-trip serialisation |
-| `FBM-Ossie/Example/` | Ossie YAML and FBM example models |
+| `Ossie-FBM/` | .NET Standard Ossie document model plus YAML parsing and serialisation |
+| `Ossie-FBM.WinForms/` | Windows viewer and FBM ↔ Ossie mapping implementation |
+| `Ossie-FBM.Verification/` | Executable checks for YAML detection, parsing, and round-trip serialisation |
+| `Ossie-FBM/Example/` | Ossie YAML and FBM example models |
 | `Notes/` | Implementation findings and candidate specification proposals |
 | `Dependencies/` | Local binary dependency used by the current WinForms implementation |
 
@@ -115,13 +115,13 @@ The `CinemaBookings.fbm` example exercises a broader FBM model, including object
 
 ## Binary dependency licence
 
-`FBM-Ossie.WinForms` references `Dependencies/FactEngineForServices.dll`. The assembly is copyright FactEngine.AI, may be used for non-commercial purposes, and is necessary for `.fbm` import, export, and mapping.
+`Ossie-FBM.WinForms` references `Dependencies/FactEngineForServices.dll`. The assembly is copyright FactEngine.AI, may be used for non-commercial purposes, and is necessary for `.fbm` import, export, and mapping.
 
 The DLL is included in this repository and may be copied and redistributed for non-commercial purposes, provided its licence and copyright notices accompany it. It is not licensed under Apache 2.0.
 
 Commercial use or commercial redistribution requires separate written permission or a commercial licence from FactEngine.AI. See [Dependencies/LICENCE.md](Dependencies/LICENCE.md) for the applicable terms.
 
-The core `FBM-Ossie` YAML library and verification project do not reference this proprietary assembly.
+The core `Ossie-FBM` YAML library and verification project do not reference this proprietary assembly.
 
 ## Relationship to Apache Ossie
 
@@ -147,9 +147,9 @@ See [What we learned implementing Ossie](IMPLEMENTATION_NOTES.md) for the curren
 
 Licensing is separated by component:
 
-- Original FBM-Ossie source code and documentation are licensed under the [Apache License 2.0](LICENSE).
+- Original Ossie-FBM source code and documentation are licensed under the [Apache License 2.0](LICENSE).
 - `FactEngineForServices.dll` is copyright **FactEngine.AI** and may be used and redistributed for **non-commercial purposes only**; see [Dependencies/LICENCE.md](Dependencies/LICENCE.md).
-- Examples retain their applicable source notices; see [FBM-Ossie/Example/LICENCE.md](FBM-Ossie/Example/LICENCE.md).
+- Examples retain their applicable source notices; see [Ossie-FBM/Example/LICENCE.md](Ossie-FBM/Example/LICENCE.md).
 - Consolidated scope and attribution information is in [LICENCE.md](LICENCE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Because the binary dependency is not Apache-licensed, the complete application is not an Apache-2.0-only distribution. Commercial use or redistribution requires the necessary permission or licence from FactEngine.AI.
