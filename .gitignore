@@ -21,9 +21,6 @@ coverage/
 *.snupkg
 publish/
 
-# FactEngine.AI proprietary dependency: local use only; redistribution prohibited
-/Dependencies/FactEngineForServices.dll
-
 # Operating-system files
 Thumbs.db
 Desktop.ini
