@@ -10,9 +10,9 @@ Project website: <https://ossie.apache.org/>
 
 ## FactEngineForServices
 
-`Dependencies/FactEngineForServices.dll` is copyright FactEngine.AI, is made available for non-commercial use, and may not be redistributed. It is not covered by the repository’s Apache 2.0 licence.
+`Dependencies/FactEngineForServices.dll` is copyright FactEngine.AI and is made available for non-commercial use and redistribution. It is not covered by the repository's Apache 2.0 licence.
 
-The binary is excluded from the repository. Each user must obtain it directly from FactEngine.AI. See [Dependencies/LICENCE.md](Dependencies/LICENCE.md).
+The binary is included in this repository. Commercial use or redistribution requires separate permission or a commercial licence from FactEngine.AI. See [Dependencies/LICENCE.md](Dependencies/LICENCE.md).
 
 ## NuGet dependencies
 

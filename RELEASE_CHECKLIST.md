@@ -4,7 +4,7 @@ This checklist is the release gate for the first public FactEngineCommunity vers
 
 ## Blocking
 
-- [x] Exclude `Dependencies/FactEngineForServices.dll` from Git and all distributions; users must obtain it directly from FactEngine.AI because redistribution is prohibited.
+- [x] Include `Dependencies/FactEngineForServices.dll` only with its FactEngine.AI non-commercial-use licence and copyright notice.
 - [ ] Confirm that “FactEngineCommunity contributors” is the desired copyright statement for original project code.
 - [ ] Review every example’s provenance and retain or add the required attribution.
 - [ ] Remove generated, user-specific, temporary, and validation files from the publication set.
@@ -18,7 +18,7 @@ This checklist is the release gate for the first public FactEngineCommunity vers
 - [x] State that the project is independent and not an official Apache Ossie project.
 - [x] Document the unresolved binary dependency prominently.
 - [x] Separate Apache-licensed original work from the FactEngine.AI non-commercial binary terms.
-- [x] Document the local dependency installation path and non-redistribution requirement.
+- [x] Document the bundled dependency path and non-commercial redistribution scope.
 - [ ] Add at least two screenshots: the Ossie tree/YAML view and the converted FBM view.
 - [x] Add stable links to the FBM background and upstream Ossie project.
 - [x] Add a concise “What we learned implementing Ossie” note.

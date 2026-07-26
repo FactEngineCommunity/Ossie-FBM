@@ -9,4 +9,5 @@ The Apache Software Foundation.
 
 FactEngineForServices.dll is copyright FactEngine.AI and is made available
 for non-commercial use. It is not licensed under Apache License 2.0.
-Redistribution is prohibited; the DLL must not be included in any distribution.
+Copying and redistribution are permitted for non-commercial purposes subject
+to the terms in Dependencies/LICENCE.md.

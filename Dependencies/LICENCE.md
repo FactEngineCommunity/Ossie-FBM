@@ -14,13 +14,10 @@ The binary is not licensed under the Apache License 2.0 that applies to the orig
 
 ## Distribution scope
 
-**Redistribution is not permitted.**
+**Redistribution is permitted for non-commercial purposes only.**
 
-The DLL must not be:
+The DLL may be copied and redistributed for non-commercial purposes, provided this licence notice and the FactEngine.AI copyright notice remain with the binary.
 
-- committed to a public or private repository as part of FBM-Ossie;
-- attached to an FBM-Ossie release;
-- included in a source archive, installer, NuGet package, or other distribution; or
-- copied or supplied to another user.
+It may be committed to this repository and included in FBM-Ossie source archives, releases, installers, or packages that are made available solely for non-commercial use.
 
-Each user must obtain `FactEngineForServices.dll` directly from FactEngine.AI and place it locally in this directory. The repository’s `.gitignore` excludes the binary.
+Commercial use or commercial redistribution requires separate written permission or a commercial licence from FactEngine.AI.

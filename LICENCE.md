@@ -18,11 +18,11 @@ This includes the Ossie .NET document model and YAML support, the WinForms viewe
 
 > Copyright FactEngine.AI
 
-FactEngine.AI permits the binary to be used for non-commercial purposes but does not permit redistribution. It is not licensed under Apache 2.0. See [Dependencies/LICENCE.md](Dependencies/LICENCE.md).
+FactEngine.AI permits the binary to be used, copied, and redistributed for non-commercial purposes. It is not licensed under Apache 2.0. See [Dependencies/LICENCE.md](Dependencies/LICENCE.md).
 
 Commercial use of the complete application requires the necessary permission or licence for this component from FactEngine.AI.
 
-The binary must not be committed to this repository or included in an FBM-Ossie release. Each user must obtain it directly from FactEngine.AI.
+The binary may be committed to this repository and included in FBM-Ossie distributions for non-commercial use, provided its licence and copyright notices accompany it.
 
 ## Examples and upstream material
 

@@ -57,7 +57,7 @@ The Windows application can:
 
 - Windows
 - [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
-- `FactEngineForServices.dll`, obtained directly from FactEngine.AI for non-commercial local use; see [Licence](#licence)
+- The bundled `FactEngineForServices.dll`, licensed by FactEngine.AI for non-commercial use; see [Licence](#licence)
 
 ## Build
 
@@ -113,17 +113,13 @@ The `CinemaBookings.fbm` example exercises a broader FBM model, including object
 - The examples derived from Apache Ossie retain their upstream Apache licence headers.
 - Conversion-level automated tests and a distributable application package have not yet been added.
 
-## Dependency and redistribution gate
+## Binary dependency licence
 
 `FBM-Ossie.WinForms` references `Dependencies/FactEngineForServices.dll`. The assembly is copyright FactEngine.AI, may be used for non-commercial purposes, and is necessary for `.fbm` import, export, and mapping.
 
-**The DLL may not be redistributed.** It is excluded by `.gitignore` and must not be committed, attached to a release, copied into a package, or otherwise distributed with FBM-Ossie.
+The DLL is included in this repository and may be copied and redistributed for non-commercial purposes, provided its licence and copyright notices accompany it. It is not licensed under Apache 2.0.
 
-To build the WinForms project:
-
-1. obtain `FactEngineForServices.dll` directly from FactEngine.AI under its applicable terms;
-2. place it locally at `Dependencies/FactEngineForServices.dll`; and
-3. build the solution normally.
+Commercial use or commercial redistribution requires separate written permission or a commercial licence from FactEngine.AI. See [Dependencies/LICENCE.md](Dependencies/LICENCE.md) for the applicable terms.
 
 The core `FBM-Ossie` YAML library and verification project do not reference this proprietary assembly.
 
@@ -152,8 +148,8 @@ See [What we learned implementing Ossie](IMPLEMENTATION_NOTES.md) for the curren
 Licensing is separated by component:
 
 - Original FBM-Ossie source code and documentation are licensed under the [Apache License 2.0](LICENSE).
-- `FactEngineForServices.dll` is copyright **FactEngine.AI**, may be used for **non-commercial purposes only**, and **may not be redistributed**; see [Dependencies/LICENCE.md](Dependencies/LICENCE.md).
+- `FactEngineForServices.dll` is copyright **FactEngine.AI** and may be used and redistributed for **non-commercial purposes only**; see [Dependencies/LICENCE.md](Dependencies/LICENCE.md).
 - Examples retain their applicable source notices; see [FBM-Ossie/Example/LICENCE.md](FBM-Ossie/Example/LICENCE.md).
 - Consolidated scope and attribution information is in [LICENCE.md](LICENCE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Because the binary dependency is not Apache-licensed, the complete application is not an Apache-2.0-only distribution. Every user must obtain the DLL directly from FactEngine.AI; commercial use additionally requires the necessary permission or licence.
+Because the binary dependency is not Apache-licensed, the complete application is not an Apache-2.0-only distribution. Commercial use or redistribution requires the necessary permission or licence from FactEngine.AI.
