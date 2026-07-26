@@ -1,6 +1,6 @@
 # Public Release Checklist
 
-This checklist is the release gate for the first public FactEngineCommunity version of FBM-Ossie.
+This checklist is the release gate for the first public FactEngineCommunity version of Ossie-FBM.
 
 ## Blocking
 
@@ -44,4 +44,4 @@ This checklist is the release gate for the first public FactEngineCommunity vers
 
 | Date | Check | Result |
 | --- | --- | --- |
-| 2026-07-26 | `dotnet build .\FBM-Ossie.slnx --configuration Release --nologo` using SDK 10.0.302 | Passed: 0 warnings, 0 errors |
+| 2026-07-26 | `dotnet build .\Ossie-FBM.slnx --configuration Release --nologo` using SDK 10.0.302 | Passed: 0 warnings, 0 errors |
