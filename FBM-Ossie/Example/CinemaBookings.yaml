@@ -1,0 +1,1591 @@
+name: CinemaBookings
+description: 
+ai_context: 
+requires: 
+ontology:
+- description: 
+  concept:
+    name: Age
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: CinemaName
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Cinema_Id
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: DateOfBirth
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: DateTime
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Film Name
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Film_Id
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: First Name
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Last Name
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Letter
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships:
+  - name: SeatHasSeatNr
+    description: 
+    roles:
+    - concept: Seat
+      name: 
+    multiplicity: 
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Seat} has {Letter}'
+    - '{Letter} is for {Seat}'
+- description: 
+  concept:
+    name: LoginName
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Person_Id
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Rating
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: RowNr
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: SeatCount
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Section_Name
+    type: ValueType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Adult
+    type: EntityType
+    description: 
+    extends:
+    - Person
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Booking
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships:
+  - name: BookingHasSeat
+    description: 
+    roles:
+    - concept: Seat
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Booking} has {Seat}'
+    - '{Seat} is of {Booking}'
+  - name: BookingHasSeatCount
+    description: 
+    roles:
+    - concept: SeatCount
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Booking} has {SeatCount}'
+  - name: BookingIsForPerson
+    description: 
+    roles:
+    - concept: Person
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Booking} is for {Person}'
+    - '{Person} made {Booking}'
+  - name: BookingIsForSession
+    description: 
+    roles:
+    - concept: Session
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Booking} is for {Session}'
+    - '{Session} has {Booking}'
+  - name: isConfirmed
+    description: 
+    roles: []
+    multiplicity: 
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Booking} is confirmed'
+- description: 
+  concept:
+    name: Child
+    type: EntityType
+    description: 
+    extends:
+    - Person
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+- description: 
+  concept:
+    name: Cinema
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by:
+    - CinemaHasCinema_Id
+    requires: 
+  relationships:
+  - name: CinemaContainsRow
+    description: 
+    roles:
+    - concept: Row
+      name: 
+    multiplicity: 
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Cinema} contains {Row}'
+    - '{Row} is in {Cinema}'
+  - name: CinemaHasCinemaName
+    description: 
+    roles:
+    - concept: CinemaName
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Cinema} has {CinemaName}'
+  - name: CinemaHasCinema_Id
+    description: 
+    roles:
+    - concept: Cinema_Id
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Cinema_Id} is of {Cinema}'
+    - '{Cinema} has {Cinema_Id}'
+- description: 
+  concept:
+    name: Film
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by:
+    - FilmHasFilm_Id
+    requires: 
+  relationships:
+  - name: FilmHasFilmName
+    description: 
+    roles:
+    - concept: Film Name
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Film} has {Film Name}'
+    - '{Film Name} is for {Film}'
+  - name: FilmHasFilm_Id
+    description: 
+    roles:
+    - concept: Film_Id
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Film_Id} is of {Film}'
+    - '{Film} has {Film_Id}'
+  - name: Session
+    description: 
+    roles:
+    - concept: DateTime
+      name: 
+    - concept: Cinema
+      name: 
+    multiplicity: 
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Film} is showing on {DateTime} at {Cinema}'
+    - '{Cinema} is showing {Film} on {DateTime}'
+    - '{DateTime} has {Film} showing at {Cinema}'
+    - '{Cinema} on {DateTime} is showing {Film}'
+- description: 
+  concept:
+    name: Person
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by:
+    - PersonHasPerson_Id
+    requires: 
+  relationships:
+  - name: Booking
+    description: 
+    roles:
+    - concept: Session
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Person} booked {Session}'
+  - name: PersonHasAge
+    description: 
+    roles:
+    - concept: Age
+      name: 
+    multiplicity: ManyToOne
+    derived_by:
+    - Age = FLOOR(EXTRACT(YEAR FROM AGE(CURRENT_DATE, DateOfBirth)))
+    requires: 
+    verbalizes:
+    - '{Person} has {Age}'
+  - name: PersonHasDateOfBirth
+    description: 
+    roles:
+    - concept: DateOfBirth
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Person} has {DateOfBirth}'
+  - name: PersonHasFirstName
+    description: 
+    roles:
+    - concept: First Name
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Person} has {First Name}'
+    - '{First Name} is of {Person}'
+  - name: PersonHasPerson_Id
+    description: 
+    roles:
+    - concept: Person_Id
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Person_Id} is of {Person}'
+    - '{Person} has {Person_Id}'
+  - name: PersonLikesFilm
+    description: 
+    roles:
+    - concept: Film
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Person} likes {Film}'
+  - name: PersonName
+    description: 
+    roles:
+    - concept: LoginName
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Person} has login-{LoginName}'
+  - name: PersonNewValueType1
+    description: 
+    roles:
+    - concept: Last Name
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Person} has {Last Name}'
+    - '{Last Name} is of {Person}'
+- description: 
+  concept:
+    name: PersonLikesFilm
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships:
+  - name: FilmPersonLikesFilm
+    description: 
+    roles:
+    - concept: Film
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{PersonLikesFilm} involves {Film}'
+    - '{Film} is involved in {PersonLikesFilm}'
+  - name: PersonLikesFilmHasRating
+    description: 
+    roles:
+    - concept: Rating
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{PersonLikesFilm} has {Rating}'
+  - name: PersonPersonLikesFilm
+    description: 
+    roles:
+    - concept: Person
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{PersonLikesFilm} involves {Person}'
+    - '{Person} is involved in {PersonLikesFilm}'
+- description: 
+  concept:
+    name: Row
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by:
+    - RowHasRowNr
+    - CinemaContainsRow
+    requires: 
+  relationships:
+  - name: RowContainsSeat
+    description: 
+    roles:
+    - concept: Seat
+      name: 
+    multiplicity: 
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Seat} is in {Row}'
+    - '{Row} contains {Seat}'
+  - name: RowHasRowNr
+    description: 
+    roles:
+    - concept: RowNr
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Row} has {RowNr}'
+- description: 
+  concept:
+    name: Seat
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by:
+    - RowContainsSeat
+    - SeatHasSeatNr
+    requires: 
+  relationships:
+  - name: SeatIsInSection
+    description: 
+    roles:
+    - concept: Section
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Seat} is in {Section}'
+    - '{Section} has {Seat}'
+- description: 
+  concept:
+    name: Section
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by:
+    - SectionHasSection_Name
+    requires: 
+  relationships:
+  - name: SectionHasSection_Name
+    description: 
+    roles:
+    - concept: Section_Name
+      name: 
+    multiplicity: OneToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Section} has {Section_Name}'
+    - '{Section_Name} is of {Section}'
+- description: 
+  concept:
+    name: Session
+    type: EntityType
+    description: 
+    extends: 
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships:
+  - name: DateTimeSession
+    description: 
+    roles:
+    - concept: DateTime
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Session} involves {DateTime}'
+    - '{DateTime} is involved in {Session}'
+    - '{DateTime} has {Session}'
+    - '{Session} is on {DateTime}'
+    - '{Session} is for {DateTime}'
+  - name: SessionIsAtCinema
+    description: 
+    roles:
+    - concept: Cinema
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Cinema} hosts {Session}'
+    - '{Session} is at {Cinema}'
+  - name: SessionIsForFilm
+    description: 
+    roles:
+    - concept: Film
+      name: 
+    multiplicity: ManyToOne
+    derived_by: 
+    requires: 
+    verbalizes:
+    - '{Film} is shown in {Session}'
+    - '{Session} is for {Film}'
+    - '{Session} is showing {Film}'
+- description: 
+  concept:
+    name: Teenager
+    type: EntityType
+    description: 
+    extends:
+    - Person
+    derived_by: 
+    identify_by: 
+    requires: 
+  relationships: []
+ontology_mappings:
+- name: cinemabookings_mapping
+  description: Mapping generated from the FactEngine Relational Data Structure.
+  semantic_model:
+    name: CinemaBookings semantic model
+    description: 
+    ai_context: 
+    datasets:
+    - name: Adult
+      source: Adult
+      primary_key:
+      - FirstName
+      - LastName
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: FirstName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: FirstName
+        dimension: 
+        label: FirstName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: LastName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: LastName
+        dimension: 
+        label: LastName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Booking
+      source: Booking
+      primary_key:
+      - Person_Id
+      - DateTime
+      - Film_Id
+      - Cinema_Id
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: Person_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Person_Id
+        dimension: 
+        label: Person_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Film_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Film_Id
+        dimension: 
+        label: Film_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: DateTime
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: DateTime
+        dimension: 
+        label: DateTime
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Cinema_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Cinema_Id
+        dimension: 
+        label: Cinema_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: SeatCount
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: SeatCount
+        dimension: 
+        label: SeatCount
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: BookingHasSeat
+      source: BookingHasSeat
+      primary_key:
+      - PersonId
+      - FilmId
+      - DateTime
+      - CinemaId
+      - RowNr
+      - Cinema_Id
+      - Letter
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: PersonId
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: PersonId
+        dimension: 
+        label: PersonId
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: FilmId
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: FilmId
+        dimension: 
+        label: FilmId
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: DateTime
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: DateTime
+        dimension: 
+        label: DateTime
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: CinemaId
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: CinemaId
+        dimension: 
+        label: CinemaId
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: RowNr
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: RowNr
+        dimension: 
+        label: RowNr
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Cinema_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Cinema_Id
+        dimension: 
+        label: Cinema_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Letter
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Letter
+        dimension: 
+        label: Letter
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Child
+      source: Child
+      primary_key:
+      - FirstName
+      - LastName
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: FirstName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: FirstName
+        dimension: 
+        label: FirstName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: LastName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: LastName
+        dimension: 
+        label: LastName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Cinema
+      source: Cinema
+      primary_key:
+      - Cinema_Id
+      unique_keys:
+      - - CinemaName
+      description: 
+      ai_context: 
+      fields:
+      - name: Cinema_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Cinema_Id
+        dimension: 
+        label: Cinema_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: CinemaName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: CinemaName
+        dimension: 
+        label: CinemaName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Film
+      source: Film
+      primary_key:
+      - Film_Id
+      unique_keys:
+      - - Name
+      description: 
+      ai_context: 
+      fields:
+      - name: Film_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Film_Id
+        dimension: 
+        label: Film_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Name
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Name
+        dimension: 
+        label: Name
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Person
+      source: Person
+      primary_key:
+      - Person_Id
+      unique_keys:
+      - - LoginName
+      - - FirstName
+        - LastName
+      description: 
+      ai_context: 
+      fields:
+      - name: Person_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Person_Id
+        dimension: 
+        label: Person_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: LoginName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: LoginName
+        dimension: 
+        label: LoginName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Age
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Age
+        dimension: 
+        label: Age
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: FirstName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: FirstName
+        dimension: 
+        label: FirstName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: LastName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: LastName
+        dimension: 
+        label: LastName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: DateOfBirth
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: DateOfBirth
+        dimension: 
+        label: DateOfBirth
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: PersonLikesFilm
+      source: PersonLikesFilm
+      primary_key:
+      - Film_Id
+      - Person_Id
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: Person_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Person_Id
+        dimension: 
+        label: Person_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Film_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Film_Id
+        dimension: 
+        label: Film_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Rating
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Rating
+        dimension: 
+        label: Rating
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Row
+      source: Row
+      primary_key:
+      - RowNr
+      - Cinema_Id
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: Cinema_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Cinema_Id
+        dimension: 
+        label: Cinema_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: RowNr
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: RowNr
+        dimension: 
+        label: RowNr
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Seat
+      source: Seat
+      primary_key:
+      - Cinema_Id
+      - Letter
+      - RowNr
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: Cinema_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Cinema_Id
+        dimension: 
+        label: Cinema_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: RowNr
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: RowNr
+        dimension: 
+        label: RowNr
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Letter
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Letter
+        dimension: 
+        label: Letter
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Section_Name
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Section_Name
+        dimension: 
+        label: Section_Name
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Section
+      source: Section
+      primary_key:
+      - Section_Name
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: Section_Name
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Section_Name
+        dimension: 
+        label: Section_Name
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Session
+      source: Session
+      primary_key:
+      - DateTime
+      - Film_Id
+      - Cinema_Id
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: Film_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Film_Id
+        dimension: 
+        label: Film_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: DateTime
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: DateTime
+        dimension: 
+        label: DateTime
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: Cinema_Id
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: Cinema_Id
+        dimension: 
+        label: Cinema_Id
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    - name: Teenager
+      source: Teenager
+      primary_key:
+      - FirstName
+      - LastName
+      unique_keys: 
+      description: 
+      ai_context: 
+      fields:
+      - name: FirstName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: FirstName
+        dimension: 
+        label: FirstName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      - name: LastName
+        expression:
+          dialects:
+          - dialect: ANSI_SQL
+            expression: LastName
+        dimension: 
+        label: LastName
+        description: 
+        ai_context: 
+        custom_extensions: 
+      custom_extensions: 
+    relationships:
+    - name: FilmPersonLikesFilm
+      from: PersonLikesFilm
+      to: Film
+      from_columns:
+      - Film_Id
+      to_columns:
+      - Film_Id
+      ai_context: 
+      custom_extensions: 
+    - name: SessionIsAtCinema
+      from: Session
+      to: Cinema
+      from_columns:
+      - Cinema_Id
+      to_columns:
+      - Cinema_Id
+      ai_context: 
+      custom_extensions: 
+    - name: CinemaContainsRow
+      from: Row
+      to: Cinema
+      from_columns:
+      - Cinema_Id
+      to_columns:
+      - Cinema_Id
+      ai_context: 
+      custom_extensions: 
+    - name: BookingIsForPerson
+      from: Booking
+      to: Person
+      from_columns:
+      - Person_Id
+      to_columns:
+      - Person_Id
+      ai_context: 
+      custom_extensions: 
+    - name: BookingIsForSession
+      from: Booking
+      to: Session
+      from_columns:
+      - Film_Id
+      - DateTime
+      - Cinema_Id
+      to_columns:
+      - Film_Id
+      - DateTime
+      - Cinema_Id
+      ai_context: 
+      custom_extensions: 
+    - name: PersonPersonLikesFilm
+      from: PersonLikesFilm
+      to: Person
+      from_columns:
+      - Person_Id
+      to_columns:
+      - Person_Id
+      ai_context: 
+      custom_extensions: 
+    - name: SeatIsInSection
+      from: Seat
+      to: Section
+      from_columns:
+      - Section_Name
+      to_columns:
+      - Section_Name
+      ai_context: 
+      custom_extensions: 
+    - name: SessionIsForFilm
+      from: Session
+      to: Film
+      from_columns:
+      - Film_Id
+      to_columns:
+      - Film_Id
+      ai_context: 
+      custom_extensions: 
+    - name: RowContainsSeat
+      from: Seat
+      to: Row
+      from_columns:
+      - Cinema_Id
+      - RowNr
+      to_columns:
+      - Cinema_Id
+      - RowNr
+      ai_context: 
+      custom_extensions: 
+    - name: BookingBookingHasSeat
+      from: BookingHasSeat
+      to: Booking
+      from_columns:
+      - PersonId
+      - FilmId
+      - DateTime
+      - CinemaId
+      to_columns:
+      - Cinema_Id
+      - DateTime
+      - Film_Id
+      - Person_Id
+      ai_context: 
+      custom_extensions: 
+    - name: SeatBookingHasSeat
+      from: BookingHasSeat
+      to: Seat
+      from_columns:
+      - RowNr
+      - Cinema_Id
+      - Letter
+      to_columns:
+      - Cinema_Id
+      - RowNr
+      - Letter
+      ai_context: 
+      custom_extensions: 
+    - name: BookingHasSeat
+      from: Booking
+      to: Seat
+      from_columns:
+      - Cinema_Id
+      - DateTime
+      - Film_Id
+      - Person_Id
+      to_columns:
+      - Cinema_Id
+      - RowNr
+      - Letter
+      ai_context: 
+      custom_extensions: 
+    metrics: 
+    custom_extensions: 
+  concept_mappings:
+  - concept: Adult
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: PersonHasFirstName
+        expression: Adult.FirstName
+        referent_mappings: 
+      - relationship: PersonNewValueType1
+        expression: Adult.LastName
+        referent_mappings: 
+      expression: 
+    link_mappings: 
+  - concept: Booking
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: Booking
+        expression: Booking.Person_Id
+        referent_mappings: 
+      - relationship: Booking
+        expression: Booking.DateTime
+        referent_mappings: 
+      - relationship: Booking
+        expression: Booking.Film_Id
+        referent_mappings: 
+      - relationship: Booking
+        expression: Booking.Cinema_Id
+        referent_mappings: 
+      expression: 
+    link_mappings:
+    - relationship: 
+      object_mapping:
+        concept: 
+        referent_mappings:
+        - relationship: Booking
+          expression: Booking.Person_Id
+          referent_mappings: 
+        - relationship: Booking
+          expression: Booking.DateTime
+          referent_mappings: 
+        - relationship: Booking
+          expression: Booking.Film_Id
+          referent_mappings: 
+        - relationship: Booking
+          expression: Booking.Cinema_Id
+          referent_mappings: 
+        expression: 
+      children:
+      - relationship: BookingHasSeatCount
+        object_mapping:
+          concept: SeatCount
+          referent_mappings: 
+          expression: Booking.SeatCount
+        children: 
+  - concept: Child
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: PersonHasFirstName
+        expression: Child.FirstName
+        referent_mappings: 
+      - relationship: PersonNewValueType1
+        expression: Child.LastName
+        referent_mappings: 
+      expression: 
+    link_mappings: 
+  - concept: Cinema
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: CinemaHasCinema_Id
+        expression: Cinema.Cinema_Id
+        referent_mappings: 
+      expression: 
+    link_mappings:
+    - relationship: 
+      object_mapping:
+        concept: 
+        referent_mappings:
+        - relationship: CinemaHasCinema_Id
+          expression: Cinema.Cinema_Id
+          referent_mappings: 
+        expression: 
+      children:
+      - relationship: CinemaHasCinemaName
+        object_mapping:
+          concept: CinemaName
+          referent_mappings: 
+          expression: Cinema.CinemaName
+        children: 
+  - concept: Film
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: FilmHasFilm_Id
+        expression: Film.Film_Id
+        referent_mappings: 
+      expression: 
+    link_mappings:
+    - relationship: 
+      object_mapping:
+        concept: 
+        referent_mappings:
+        - relationship: FilmHasFilm_Id
+          expression: Film.Film_Id
+          referent_mappings: 
+        expression: 
+      children:
+      - relationship: FilmHasFilmName
+        object_mapping:
+          concept: Film Name
+          referent_mappings: 
+          expression: Film.Name
+        children: 
+  - concept: Person
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: PersonHasPerson_Id
+        expression: Person.Person_Id
+        referent_mappings: 
+      expression: 
+    link_mappings:
+    - relationship: 
+      object_mapping:
+        concept: 
+        referent_mappings:
+        - relationship: PersonHasPerson_Id
+          expression: Person.Person_Id
+          referent_mappings: 
+        expression: 
+      children:
+      - relationship: PersonName
+        object_mapping:
+          concept: LoginName
+          referent_mappings: 
+          expression: Person.LoginName
+        children: 
+      - relationship: PersonHasAge
+        object_mapping:
+          concept: Age
+          referent_mappings: 
+          expression: Person.Age
+        children: 
+      - relationship: PersonHasFirstName
+        object_mapping:
+          concept: First Name
+          referent_mappings: 
+          expression: Person.FirstName
+        children: 
+      - relationship: PersonNewValueType1
+        object_mapping:
+          concept: Last Name
+          referent_mappings: 
+          expression: Person.LastName
+        children: 
+      - relationship: PersonHasDateOfBirth
+        object_mapping:
+          concept: DateOfBirth
+          referent_mappings: 
+          expression: Person.DateOfBirth
+        children: 
+  - concept: PersonLikesFilm
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: PersonLikesFilm
+        expression: PersonLikesFilm.Film_Id
+        referent_mappings: 
+      - relationship: PersonLikesFilm
+        expression: PersonLikesFilm.Person_Id
+        referent_mappings: 
+      expression: 
+    link_mappings:
+    - relationship: 
+      object_mapping:
+        concept: 
+        referent_mappings:
+        - relationship: PersonLikesFilm
+          expression: PersonLikesFilm.Film_Id
+          referent_mappings: 
+        - relationship: PersonLikesFilm
+          expression: PersonLikesFilm.Person_Id
+          referent_mappings: 
+        expression: 
+      children:
+      - relationship: PersonLikesFilmHasRating
+        object_mapping:
+          concept: Rating
+          referent_mappings: 
+          expression: PersonLikesFilm.Rating
+        children: 
+  - concept: Row
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: RowHasRowNr
+        expression: Row.RowNr
+        referent_mappings: 
+      - relationship: CinemaContainsRow
+        expression: Row.Cinema_Id
+        referent_mappings: 
+      expression: 
+    link_mappings: 
+  - concept: Seat
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: RowContainsSeat
+        expression: Seat.Cinema_Id
+        referent_mappings: 
+      - relationship: SeatHasSeatNr
+        expression: Seat.Letter
+        referent_mappings: 
+      - relationship: RowContainsSeat
+        expression: Seat.RowNr
+        referent_mappings: 
+      expression: 
+    link_mappings:
+    - relationship: 
+      object_mapping:
+        concept: 
+        referent_mappings:
+        - relationship: RowContainsSeat
+          expression: Seat.Cinema_Id
+          referent_mappings: 
+        - relationship: SeatHasSeatNr
+          expression: Seat.Letter
+          referent_mappings: 
+        - relationship: RowContainsSeat
+          expression: Seat.RowNr
+          referent_mappings: 
+        expression: 
+      children:
+      - relationship: SeatIsInSection
+        object_mapping:
+          concept: Section
+          referent_mappings: 
+          expression: Seat.Section_Name
+        children: 
+  - concept: Section
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: SectionHasSection_Name
+        expression: Section.Section_Name
+        referent_mappings: 
+      expression: 
+    link_mappings: 
+  - concept: Session
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: Session
+        expression: Session.DateTime
+        referent_mappings: 
+      - relationship: Session
+        expression: Session.Film_Id
+        referent_mappings: 
+      - relationship: Session
+        expression: Session.Cinema_Id
+        referent_mappings: 
+      expression: 
+    link_mappings: 
+  - concept: Teenager
+    object_mappings:
+    - concept: 
+      referent_mappings:
+      - relationship: PersonHasFirstName
+        expression: Teenager.FirstName
+        referent_mappings: 
+      - relationship: PersonNewValueType1
+        expression: Teenager.LastName
+        referent_mappings: 
+      expression: 
+    link_mappings: 
+version: 1.0

@@ -1,0 +1,113 @@
+All the `requires` examples are in `flights.yaml`; `tpcds_semantic_model.yaml` contains none.
+
+Concept-level examples:
+
+```yaml
+name: CancelationCode
+type: ValueType
+extends: [ String ]
+requires:
+  - CancelationCode == 'A' OR
+    CancelationCode == 'B' OR
+    CancelationCode == 'C' OR
+    CancelationCode == 'D'
+```
+
+This restricts valid cancellation codes. [flights.yaml](C:\01-FactEngine\01-Products\01-Product\Ossie\FBM-Ossie\FBM-Ossie\Example\flights.yaml:46)
+
+```yaml
+name: DegreesLatitude
+type: ValueType
+extends: [ Decimal ]
+requires:
+  - DegreesLatitude <= 90
+  - DegreesLatitude >= -90
+```
+
+```yaml
+name: DegreesLongitude
+type: ValueType
+extends: [ Decimal ]
+requires:
+  - DegreesLongitude <= 180
+  - DegreesLongitude >= -180
+```
+
+These are value-range constraints. [flights.yaml](C:\01-FactEngine\01-Products\01-Product\Ossie\FBM-Ossie\FBM-Ossie\Example\flights.yaml:57)
+
+```yaml
+name: DistanceGroup
+type: ValueType
+extends: [ Integer ]
+requires:
+  - 1 <= DistanceGroup
+  - DistanceGroup <= 10
+```
+
+Another value-range constraint. [flights.yaml](C:\01-FactEngine\01-Products\01-Product\Ossie\FBM-Ossie\FBM-Ossie\Example\flights.yaml:84)
+
+```yaml
+name: Airport
+type: EntityType
+identify_by: [ code ]
+requires:
+  - Airport.latitude
+  - Airport.longitude
+```
+
+This appears to require every Airport to participate in both the `latitude` and `longitude` relationships—essentially mandatory-role constraints. [flights.yaml](C:\01-FactEngine\01-Products\01-Product\Ossie\FBM-Ossie\FBM-Ossie\Example\flights.yaml:307)
+
+Relationship-level examples:
+
+```yaml
+- name: scheduled_departure
+  roles: [ { concept: DateTime } ]
+  requires:
+    - Flight.scheduled_departure < Flight.scheduled_arrival
+```
+
+```yaml
+- name: departs_at
+  roles:
+    - concept: DateTime
+  requires:
+    - Flight.departs_at < Flight.arrives_at
+```
+
+These impose ordering constraints between related DateTime values. [flights.yaml](C:\01-FactEngine\01-Products\01-Product\Ossie\FBM-Ossie\FBM-Ossie\Example\flights.yaml:402)
+
+```yaml
+- name: aircraft
+  roles:
+    - concept: Aircraft
+  requires:
+    - Flight.operated_by(Aircraft.carrier)
+```
+
+This appears to require the aircraft’s carrier to agree with the flight’s operating carrier. [flights.yaml](C:\01-FactEngine\01-Products\01-Product\Ossie\FBM-Ossie\FBM-Ossie\Example\flights.yaml:483)
+
+```yaml
+- name: destination
+  roles:
+    - concept: Airport
+  requires:
+    - NOT Route.departure(Airport)
+
+- name: departure
+  roles:
+    - concept: Airport
+  requires:
+    - NOT Route.destination(Airport)
+```
+
+These prevent the same Airport from being both ends of a Route. [flights.yaml](C:\01-FactEngine\01-Products\01-Product\Ossie\FBM-Ossie\FBM-Ossie\Example\flights.yaml:570)
+
+So `requires` is being used for several different ORM ideas:
+
+- Value constraints
+- Mandatory roles
+- Cross-value comparison constraints
+- Join/subset-like business rules
+- Exclusion constraints
+
+Multiple entries in a `requires` array are conditions that must all hold—effectively **AND** semantics. Explicit alternatives use `OR` inside an individual expression.

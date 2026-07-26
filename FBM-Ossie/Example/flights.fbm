@@ -1,0 +1,2300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <ORMModel ModelId="Ossie.Flights" Name="Flights">
+    <ValueTypes>
+      <ValueType Id="NrFeet" GUID="6195a13c-6c7c-4a25-9bda-bdc24fb2d5d8" Name="NrFeet" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="NrPounds" GUID="bcfda311-321b-4ba0-bce5-4585af8cc7e7" Name="NrPounds" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="NrMiles" GUID="523ebf6c-7406-4850-882e-1b7a6063cb11" Name="NrMiles" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="NrMinutes" GUID="19352f4d-e2cb-4480-b5c6-694b42be72a3" Name="NrMinutes" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="CancelationCode" GUID="0d673d4c-011b-4885-8f0b-0c51943885d3" Name="CancelationCode" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Capacity" GUID="7a4c01f2-082c-4c26-9861-6c1d23e8f29d" Name="Capacity" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="DegreesLatitude" GUID="d6f4845e-eda0-4e55-9df5-518e81a615ad" Name="DegreesLatitude" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="DegreesLongitude" GUID="7833edbe-1777-4318-9d6a-109ab02aa1b6" Name="DegreesLongitude" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Polygon" GUID="57831619-112b-491a-9f56-b8f22e5c5634" Name="Polygon" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="CityName" GUID="cee44785-2fc2-401a-80ab-94c025ac1752" Name="CityName" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Delay" GUID="63a2ce22-c182-419f-96a5-0372436dcd5f" Name="Delay" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Distance" GUID="513e8bba-937f-4aa2-a96b-abb0382b0e06" Name="Distance" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="DistanceGroup" GUID="2b6205e8-cce6-4991-a2c8-6b5684b7f85c" Name="DistanceGroup" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="RunwayGeometry" GUID="fcbb6e3f-6a81-4e41-a163-f0fc19615d13" Name="RunwayGeometry" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="RunwayLength" GUID="12b8798d-6c9f-4c08-8d6f-faac723b2c15" Name="RunwayLength" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="RunwayDesignator" GUID="12979c69-b91e-4751-9d90-9787756af92f" Name="RunwayDesignator" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="SerialNr" GUID="98df1d4c-7130-40ee-b3e0-0a8b8254dea5" Name="SerialNr" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="StateCode" GUID="e16594ae-0b01-477d-b732-b208cac2946c" Name="StateCode" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="StateName" GUID="cf399db0-c276-461a-b3d4-a3e83eeb18a0" Name="StateName" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="TailNr" GUID="0d4b340c-66c0-4302-801b-222fc649b376" Name="TailNr" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Year" GUID="ca3d4fed-d9af-4d08-93c6-b0e8f92e6a6b" Name="Year" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="ManufacturerName" GUID="ecd05edb-da0b-4b08-8b14-18b1852a9709" Name="ManufacturerName" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="ModelName" GUID="7544023b-0246-4731-98f1-2da456e206f4" Name="ModelName" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="AirportName" GUID="5b00f7b9-351f-4583-ad7b-5053e679d74f" Name="AirportName" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="AirportCode" GUID="d3fc245c-8590-4db2-a561-3412226d5a4a" Name="AirportCode" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="AirportId" GUID="00cedb70-5214-4683-8a16-96f2c97bb0f5" Name="AirportId" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="MarketName" GUID="dd1920f4-8fd1-441d-ad84-3868a6b975d3" Name="MarketName" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="FlightNr" GUID="474790cc-3ee5-4f99-8de1-1b3836df63de" Name="FlightNr" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="FlightId" GUID="0b28595f-6b43-4792-854d-8ed0c835a1ea" Name="FlightId" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="CarrierCode" GUID="30d17db6-fe95-4c50-a2c6-59097755902e" Name="CarrierCode" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="CarrierName" GUID="262d2a5d-8752-4dc5-af12-6826f3d2d385" Name="CarrierName" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="RouteId" GUID="0f0a66ca-9e52-4c3b-8769-a2ee486295a1" Name="RouteId" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="String" GUID="6a42b106-4aa3-4fbb-87f3-26aa08853537" Name="String" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Integer" GUID="636bef19-809d-43e4-9b8a-3eca9d0b5421" Name="Integer" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="DateTime" GUID="be2e64bc-6b1c-48f2-8312-ba067c16a7c9" Name="DateTime" DataType="TemporalDateAndTime" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Date" GUID="6785b8a6-1ea4-4864-bbbb-bea00d32128d" Name="Date" DataType="TemporalDate" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+    </ValueTypes>
+    <EntityTypes>
+      <EntityType Id="CancelationReason" GUID="c02b4961-66bc-48b9-8676-b7ce033c5ef6" Name="CancelationReason" DBName="" ReferenceModeValueTypeId="CancelationCode" ReferenceSchemeRoleConstraintId="CancelationReasonIsIdentifiedByCancelationCode.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="CancelationCode" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="State" GUID="aa27a7a3-31e4-419a-ada6-168c8abbe49d" Name="State" DBName="" ReferenceModeValueTypeId="StateCode" ReferenceSchemeRoleConstraintId="StateIsIdentifiedByStateCode.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="StateCode" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="City" GUID="2deb1012-ca23-46e3-91eb-7ec27adc3345" Name="City" DBName="" ReferenceSchemeRoleConstraintId="City.ExternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Runway" GUID="b076f69b-4272-4b5c-acbd-ed7701b6c993" Name="Runway" DBName="" ReferenceSchemeRoleConstraintId="Runway.ExternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Manufacturer" GUID="11a8cc3a-e2e2-45b0-825c-527c324f4a3b" Name="Manufacturer" DBName="" ReferenceModeValueTypeId="ManufacturerName" ReferenceSchemeRoleConstraintId="ManufacturerIsIdentifiedByManufacturerName.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="ManufacturerName" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Model" GUID="c6c19a47-3803-4cf8-9f29-0c2a17977b3d" Name="Model" DBName="" ReferenceSchemeRoleConstraintId="Model.ExternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Aircraft" GUID="dcfd0dda-1eb4-4093-95e2-d2e3a419747d" Name="Aircraft" DBName="" ReferenceModeValueTypeId="TailNr" ReferenceSchemeRoleConstraintId="AircraftIsIdentifiedByTailNr.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="TailNr" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Airport" GUID="987d9b34-64ea-42c0-87ca-5a8346d1adeb" Name="Airport" DBName="" ReferenceModeValueTypeId="AirportCode" ReferenceSchemeRoleConstraintId="AirportHasAirportCode.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="AirportCode" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Market" GUID="db3a718c-a032-470d-9d6a-853a793fcf37" Name="Market" DBName="" ReferenceModeValueTypeId="MarketName" ReferenceSchemeRoleConstraintId="MarketIsIdentifiedByMarketName.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="MarketName" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Flight" GUID="a8b8566d-31a6-485e-98ce-103380809f5d" Name="Flight" DBName="" ReferenceModeValueTypeId="FlightId" ReferenceSchemeRoleConstraintId="FlightIsIdentifiedByFlightId.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="FlightId" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Carrier" GUID="0d1868a1-444e-49e9-b7aa-3fb66207894f" Name="Carrier" DBName="" ReferenceModeValueTypeId="CarrierCode" ReferenceSchemeRoleConstraintId="CarrierUsesCarrierCode.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="CarrierCode" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Route" GUID="fa518f82-84a1-42d9-bb7e-bbe0a6ab420d" Name="Route" DBName="" ReferenceModeValueTypeId="RouteId" ReferenceSchemeRoleConstraintId="RouteIsIdentifiedByRouteId.Role2.InternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="RouteId" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+    </EntityTypes>
+    <FactTypes>
+      <FactType Id="CancelationReasonIsIdentifiedByCancelationCode" GUID="29dbb361-333d-451c-86ab-802da9a5b2c2" Name="CancelationReasonIsIdentifiedByCancelationCode" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="CancelationReason.code" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="CancelationReasonIsIdentifiedByCancelationCode.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="CancelationReason">
+            <ValueConstraint />
+          </Role>
+          <Role Id="CancelationReasonIsIdentifiedByCancelationCode.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="CancelationCode">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="CancelationReasonIsIdentifiedByCancelationCode.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="CancelationReasonIsIdentifiedByCancelationCode.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is identified by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="CancelationReasonIsIdentifiedByCancelationCode.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightHasFlightNr" GUID="cb57b355-64b0-40f1-8da6-ccd1f7f27d52" Name="FlightHasFlightNr" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.number" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightHasFlightNr.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightHasFlightNr.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="FlightNr">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightHasFlightNr.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightHasFlightNr.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightHasFlightNr.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightIsScheduledToDepartAtDateTime" GUID="573f5cf7-12c4-4073-837a-c58d8c062f0e" Name="FlightIsScheduledToDepartAtDateTime" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.scheduled_departure" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightIsScheduledToDepartAtDateTime.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightIsScheduledToDepartAtDateTime.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightIsScheduledToDepartAtDateTime.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightIsScheduledToDepartAtDateTime.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is scheduled to depart at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightIsScheduledToDepartAtDateTime.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightHasArrivalDelay" GUID="ba4c2eed-5753-49f2-96a5-25e3f95a9d64" Name="FlightHasArrivalDelay" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.arrival_delay" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightHasArrivalDelay.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightHasArrivalDelay.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Delay">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightHasArrivalDelay.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightHasArrivalDelay.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has arrival-</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightHasArrivalDelay.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightWasCanceled" GUID="beb740de-996d-4d8c-ab21-1e140111f678" Name="FlightWasCanceled" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.canceled" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightWasCanceled.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightWasCanceled.Reading1" FrontReadingText="" FollowingReadingText=" was canceled">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightWasCanceled.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightWasCanceledDueToCancelationReason" GUID="a8517f1e-790e-420d-92bd-b4b35af0941b" Name="FlightWasCanceledDueToCancelationReason" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.canceled_due_to" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightWasCanceledDueToCancelationReason.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightWasCanceledDueToCancelationReason.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="CancelationReason">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightWasCanceledDueToCancelationReason.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightWasCanceledDueToCancelationReason.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> was canceled due to</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightWasCanceledDueToCancelationReason.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightSpansActualDistance" GUID="c6be64b2-f1a9-4954-9514-748444278e79" Name="FlightSpansActualDistance" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.distance" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightSpansActualDistance.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightSpansActualDistance.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Distance">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightSpansActualDistance.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightSpansActualDistance.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> spans actual-</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightSpansActualDistance.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightIsIdentifiedByFlightId" GUID="ad24f3b4-56b1-4e95-ad3a-45776dff3e43" Name="FlightIsIdentifiedByFlightId" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.id" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightIsIdentifiedByFlightId.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightIsIdentifiedByFlightId.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="FlightId">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightIsIdentifiedByFlightId.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightIsIdentifiedByFlightId.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is identified by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightIsIdentifiedByFlightId.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightIsScheduledToArriveAtDateTime" GUID="77c4019d-96dd-4c90-ac3e-73ae62140954" Name="FlightIsScheduledToArriveAtDateTime" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.scheduled_arrival" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightIsScheduledToArriveAtDateTime.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightIsScheduledToArriveAtDateTime.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightIsScheduledToArriveAtDateTime.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightIsScheduledToArriveAtDateTime.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is scheduled to arrive at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightIsScheduledToArriveAtDateTime.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightAtDateTimeRegistersDegreesLongitude" GUID="9037f7c8-8c55-4213-a6cc-11c97017264c" Name="FlightAtDateTimeRegistersDegreesLongitude" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.registers_longitude_series" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightAtDateTimeRegistersDegreesLongitude.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightAtDateTimeRegistersDegreesLongitude.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightAtDateTimeRegistersDegreesLongitude.Role3" Name="" SequenceNr="3" Mandatory="false" JoinedObjectTypeId="DegreesLongitude">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightAtDateTimeRegistersDegreesLongitude.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightAtDateTimeRegistersDegreesLongitude.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightAtDateTimeRegistersDegreesLongitude.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> registers</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="3" Role_Id="FlightAtDateTimeRegistersDegreesLongitude.Role3" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightAtDateTimeRegistersDegreesLatitude" GUID="bd27c6a9-915b-4346-a757-df114f38b9ef" Name="FlightAtDateTimeRegistersDegreesLatitude" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.registers_latitude_series" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightAtDateTimeRegistersDegreesLatitude.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightAtDateTimeRegistersDegreesLatitude.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightAtDateTimeRegistersDegreesLatitude.Role3" Name="" SequenceNr="3" Mandatory="false" JoinedObjectTypeId="DegreesLatitude">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightAtDateTimeRegistersDegreesLatitude.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightAtDateTimeRegistersDegreesLatitude.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightAtDateTimeRegistersDegreesLatitude.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> registers</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="3" Role_Id="FlightAtDateTimeRegistersDegreesLatitude.Role3" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightIsScheduledToDepartOnDate" GUID="76178681-eb60-4845-a671-7ce546108dbe" Name="FlightIsScheduledToDepartOnDate" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.date" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightIsScheduledToDepartOnDate.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightIsScheduledToDepartOnDate.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Date">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightIsScheduledToDepartOnDate.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightIsScheduledToDepartOnDate.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is scheduled to depart on</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightIsScheduledToDepartOnDate.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightDepartsAtDateTime" GUID="a701bf3f-a8d8-4cdb-8247-44f7bce63a53" Name="FlightDepartsAtDateTime" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.departs_at" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightDepartsAtDateTime.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightDepartsAtDateTime.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightDepartsAtDateTime.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightDepartsAtDateTime.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> departs at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightDepartsAtDateTime.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightWasDiverted" GUID="41733bd7-499c-4c91-8025-2ac11f8f8bd3" Name="FlightWasDiverted" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.diverted" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightWasDiverted.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightWasDiverted.Reading1" FrontReadingText="" FollowingReadingText=" was diverted">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightWasDiverted.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightArrivesAtDateTime" GUID="08def2ab-c575-4537-a569-2831f3fd4676" Name="FlightArrivesAtDateTime" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.arrives_at" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightArrivesAtDateTime.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightArrivesAtDateTime.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightArrivesAtDateTime.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightArrivesAtDateTime.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> arrives at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightArrivesAtDateTime.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightTraversesRoute" GUID="80c65026-4e3d-48c4-a062-064f7cc8c3b4" Name="FlightTraversesRoute" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.route" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightTraversesRoute.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightTraversesRoute.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightTraversesRoute.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightTraversesRoute.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> traverses</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightTraversesRoute.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightUsesAircraft" GUID="bbdc4d88-e5ec-4228-a04f-4bc8d400f84d" Name="FlightUsesAircraft" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.aircraft" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightUsesAircraft.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightUsesAircraft.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightUsesAircraft.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightUsesAircraft.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> uses</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightUsesAircraft.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightIsOperatedByCarrier" GUID="2a1a2a3f-bc5f-4844-b0e5-2f662f6bfa4e" Name="FlightIsOperatedByCarrier" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.operated_by" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightIsOperatedByCarrier.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightIsOperatedByCarrier.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Carrier">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightIsOperatedByCarrier.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightIsOperatedByCarrier.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is operated by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightIsOperatedByCarrier.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="CarrierUsesCarrierCode" GUID="48de0c6d-5b8d-4214-ab9d-c12b804424f4" Name="CarrierUsesCarrierCode" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Carrier.code" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="CarrierUsesCarrierCode.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Carrier">
+            <ValueConstraint />
+          </Role>
+          <Role Id="CarrierUsesCarrierCode.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="CarrierCode">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="CarrierUsesCarrierCode.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="CarrierUsesCarrierCode.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> uses</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="CarrierUsesCarrierCode.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="CarrierHasCarrierName" GUID="6a60bdaf-6740-48d3-badd-37b84a91412f" Name="CarrierHasCarrierName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Carrier.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="CarrierHasCarrierName.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Carrier">
+            <ValueConstraint />
+          </Role>
+          <Role Id="CarrierHasCarrierName.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="CarrierName">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="CarrierHasCarrierName.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="CarrierHasCarrierName.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="CarrierHasCarrierName.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteHasAverageDepartureDelay" GUID="cd49c3c6-e02c-4939-80a5-38a44759fdfd" Name="RouteHasAverageDepartureDelay" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="true" IsStored="false" DerivationText="Delay == AVG[Flight.departure_delay WHERE Flight.route(Route) GROUP BY Route]" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.average_departure_delay" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteHasAverageDepartureDelay.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteHasAverageDepartureDelay.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Delay">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteHasAverageDepartureDelay.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteHasAverageDepartureDelay.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has average- departure</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteHasAverageDepartureDelay.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteHasAverageArrivalDelay" GUID="7d30b3b8-8dc9-4680-a77c-23c7c8ac1cb0" Name="RouteHasAverageArrivalDelay" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="true" IsStored="false" DerivationText="Delay == AVG[Flight.arrival_delay WHERE Flight.route(Route) GROUP BY Route]" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.average_arrival_delay" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteHasAverageArrivalDelay.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteHasAverageArrivalDelay.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Delay">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteHasAverageArrivalDelay.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteHasAverageArrivalDelay.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has average- arrival</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteHasAverageArrivalDelay.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteSpansDistance" GUID="6b590f2d-6663-4016-a6a1-cabcdb358a0f" Name="RouteSpansDistance" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.distance" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteSpansDistance.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteSpansDistance.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Distance">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteSpansDistance.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteSpansDistance.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> spans</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteSpansDistance.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteHasDistanceGroup" GUID="4846bb9e-76b2-42c4-b809-8e71ab83afb8" Name="RouteHasDistanceGroup" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.lies_in" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteHasDistanceGroup.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteHasDistanceGroup.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DistanceGroup">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteHasDistanceGroup.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteHasDistanceGroup.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteHasDistanceGroup.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteIsIdentifiedByRouteId" GUID="c3fb54af-669a-4bd6-8844-c93c4cc4f003" Name="RouteIsIdentifiedByRouteId" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.id" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteIsIdentifiedByRouteId.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteIsIdentifiedByRouteId.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="RouteId">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteIsIdentifiedByRouteId.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteIsIdentifiedByRouteId.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is identified by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteIsIdentifiedByRouteId.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteHasNameString" GUID="d588e254-9c26-4d3a-be44-5fa796e956b2" Name="RouteHasNameString" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.route_name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteHasNameString.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteHasNameString.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="String">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteHasNameString.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteHasNameString.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has name-</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteHasNameString.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="FlightHasDepartureDelay" GUID="27b58770-be10-4eb5-86b6-41b22f5fbe0e" Name="FlightHasDepartureDelay" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Flight.departure_delay" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="FlightHasDepartureDelay.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Flight">
+            <ValueConstraint />
+          </Role>
+          <Role Id="FlightHasDepartureDelay.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Delay">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="FlightHasDepartureDelay.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="FlightHasDepartureDelay.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has departure-</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="FlightHasDepartureDelay.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="MarketIsIdentifiedByMarketName" GUID="c068c124-d46f-451f-9cf3-465697426c60" Name="MarketIsIdentifiedByMarketName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Market.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="MarketIsIdentifiedByMarketName.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Market">
+            <ValueConstraint />
+          </Role>
+          <Role Id="MarketIsIdentifiedByMarketName.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="MarketName">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="MarketIsIdentifiedByMarketName.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="MarketIsIdentifiedByMarketName.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is identified by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="MarketIsIdentifiedByMarketName.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportCentersAtDegreesLatitude" GUID="b6e3afa5-7f0b-4c42-ae05-fce6b4e5b429" Name="AirportCentersAtDegreesLatitude" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.latitude" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportCentersAtDegreesLatitude.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportCentersAtDegreesLatitude.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DegreesLatitude">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportCentersAtDegreesLatitude.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportCentersAtDegreesLatitude.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> centers at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportCentersAtDegreesLatitude.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportHasAirportCode" GUID="03b2a252-4c19-4a84-b7be-3294d5e5fe4e" Name="AirportHasAirportCode" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.code" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportHasAirportCode.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportHasAirportCode.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="AirportCode">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportHasAirportCode.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportHasAirportCode.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportHasAirportCode.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="CancelationReasonHasDescriptionString" GUID="0286144d-ec22-4378-aad9-c6df737a2cd8" Name="CancelationReasonHasDescriptionString" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="CancelationReason.description" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="CancelationReasonHasDescriptionString.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="CancelationReason">
+            <ValueConstraint />
+          </Role>
+          <Role Id="CancelationReasonHasDescriptionString.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="String">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="CancelationReasonHasDescriptionString.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="CancelationReasonHasDescriptionString.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has description-</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="CancelationReasonHasDescriptionString.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="StateIsIdentifiedByStateCode" GUID="e903f766-b763-42ae-9b21-27f8570994d8" Name="StateIsIdentifiedByStateCode" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="State.code" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="StateIsIdentifiedByStateCode.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="State">
+            <ValueConstraint />
+          </Role>
+          <Role Id="StateIsIdentifiedByStateCode.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="StateCode">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="StateIsIdentifiedByStateCode.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="StateIsIdentifiedByStateCode.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is identified by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="StateIsIdentifiedByStateCode.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="StateHasStateName" GUID="c98ce0f6-485f-4f35-b38e-34b6e3f855a3" Name="StateHasStateName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="State.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="StateHasStateName.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="State">
+            <ValueConstraint />
+          </Role>
+          <Role Id="StateHasStateName.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="StateName">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="StateHasStateName.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="StateHasStateName.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="StateHasStateName.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="CityHasCityName" GUID="1bb36e17-6930-4917-9771-ee9a4eae7e34" Name="CityHasCityName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="City.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="CityHasCityName.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="City">
+            <ValueConstraint />
+          </Role>
+          <Role Id="CityHasCityName.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="CityName">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="CityHasCityName.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="CityHasCityName.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="CityHasCityName.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="CityIsLocatedInState" GUID="12307de3-8d47-4e74-b9a9-849d6526a879" Name="CityIsLocatedInState" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="City.state" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="CityIsLocatedInState.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="City">
+            <ValueConstraint />
+          </Role>
+          <Role Id="CityIsLocatedInState.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="State">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="CityIsLocatedInState.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="CityIsLocatedInState.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is located in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="CityIsLocatedInState.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RunwayBelongsToAirport" GUID="2eafcb58-23e9-4c5b-815a-30f90a34add4" Name="RunwayBelongsToAirport" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Runway.airport" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RunwayBelongsToAirport.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Runway">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RunwayBelongsToAirport.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RunwayBelongsToAirport.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RunwayBelongsToAirport.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> belongs to</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RunwayBelongsToAirport.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RunwayUsesRunwayDesignator" GUID="f8ffb31b-c4d9-43a0-b39a-fdfc6044d0c3" Name="RunwayUsesRunwayDesignator" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Runway.designator" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RunwayUsesRunwayDesignator.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Runway">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RunwayUsesRunwayDesignator.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="RunwayDesignator">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RunwayUsesRunwayDesignator.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RunwayUsesRunwayDesignator.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> uses</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RunwayUsesRunwayDesignator.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RunwayHasRunwayLength" GUID="e4302275-7ae1-403a-8f93-159342cc8d6e" Name="RunwayHasRunwayLength" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Runway.length" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RunwayHasRunwayLength.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Runway">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RunwayHasRunwayLength.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="RunwayLength">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RunwayHasRunwayLength.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RunwayHasRunwayLength.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RunwayHasRunwayLength.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RunwayHasRunwayGeometry" GUID="e3eae009-b2ed-44f9-a0de-1062bd953e20" Name="RunwayHasRunwayGeometry" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Runway.geometry" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RunwayHasRunwayGeometry.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Runway">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RunwayHasRunwayGeometry.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="RunwayGeometry">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RunwayHasRunwayGeometry.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RunwayHasRunwayGeometry.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RunwayHasRunwayGeometry.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="ManufacturerIsIdentifiedByManufacturerName" GUID="b1245398-5eb8-4e1f-b063-15b7a102df21" Name="ManufacturerIsIdentifiedByManufacturerName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Manufacturer.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="ManufacturerIsIdentifiedByManufacturerName.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Manufacturer">
+            <ValueConstraint />
+          </Role>
+          <Role Id="ManufacturerIsIdentifiedByManufacturerName.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="ManufacturerName">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="ManufacturerIsIdentifiedByManufacturerName.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="ManufacturerIsIdentifiedByManufacturerName.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is identified by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="ManufacturerIsIdentifiedByManufacturerName.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="ModelHasModelName" GUID="07119032-475c-40dc-9ec1-5e99f970959c" Name="ModelHasModelName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Model.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="ModelHasModelName.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Model">
+            <ValueConstraint />
+          </Role>
+          <Role Id="ModelHasModelName.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="ModelName">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="ModelHasModelName.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="ModelHasModelName.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="ModelHasModelName.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="ModelIsManufacturedByManufacturer" GUID="a155bd6d-747c-49a5-9709-e9250cb465b2" Name="ModelIsManufacturedByManufacturer" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Model.manufacturer" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="ModelIsManufacturedByManufacturer.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Model">
+            <ValueConstraint />
+          </Role>
+          <Role Id="ModelIsManufacturedByManufacturer.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Manufacturer">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="ModelIsManufacturedByManufacturer.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="ModelIsManufacturedByManufacturer.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is manufactured by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="ModelIsManufacturedByManufacturer.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteConnectsToDestinationAirport" GUID="12597a64-3e94-4063-84c8-8df99ca26ba4" Name="RouteConnectsToDestinationAirport" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.destination" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteConnectsToDestinationAirport.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteConnectsToDestinationAirport.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteConnectsToDestinationAirport.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteConnectsToDestinationAirport.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> connects to destination-</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteConnectsToDestinationAirport.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftHasSerialNr" GUID="25996498-2e25-4f87-ae49-e08a0fc6a44f" Name="AircraftHasSerialNr" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.serial_number" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftHasSerialNr.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftHasSerialNr.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="SerialNr">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftHasSerialNr.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftHasSerialNr.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftHasSerialNr.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftHasIntegerSeats" GUID="5b724d61-a55d-4187-98d4-5d94ddcceede" Name="AircraftHasIntegerSeats" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.number_of_seats" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftHasIntegerSeats.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftHasIntegerSeats.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Integer">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftHasIntegerSeats.Reading1" FrontReadingText="" FollowingReadingText=" seats">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftHasIntegerSeats.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftHasIntegerSeats.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftIsIdentifiedByTailNr" GUID="81448684-16e2-46d5-b005-c0da747888e5" Name="AircraftIsIdentifiedByTailNr" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.tailnum" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftIsIdentifiedByTailNr.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftIsIdentifiedByTailNr.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="TailNr">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftIsIdentifiedByTailNr.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftIsIdentifiedByTailNr.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is identified by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftIsIdentifiedByTailNr.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftHasModel" GUID="897f7985-adad-493d-9f4f-dfc12270e0dd" Name="AircraftHasModel" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.model" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftHasModel.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftHasModel.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Model">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftHasModel.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftHasModel.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftHasModel.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftWasManufacturedInYear" GUID="da1aabec-ba50-430b-9c22-46c6ce821a2b" Name="AircraftWasManufacturedInYear" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.year_manufactured" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftWasManufacturedInYear.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftWasManufacturedInYear.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Year">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftWasManufacturedInYear.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftWasManufacturedInYear.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> was manufactured in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftWasManufacturedInYear.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftHasCapacity" GUID="7f76ce90-c34b-415c-97eb-0892c9aacda4" Name="AircraftHasCapacity" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.capacity" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftHasCapacity.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftHasCapacity.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Capacity">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftHasCapacity.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftHasCapacity.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftHasCapacity.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftIsOperatedByCarrier" GUID="8e8882b8-6c6c-41f8-b428-e1e63867cfe5" Name="AircraftIsOperatedByCarrier" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.carrier" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftIsOperatedByCarrier.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftIsOperatedByCarrier.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Carrier">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftIsOperatedByCarrier.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftIsOperatedByCarrier.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is operated by</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftIsOperatedByCarrier.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportIsLocatedInCity" GUID="8731784e-72c6-4fe5-9dd7-2382691c66d7" Name="AirportIsLocatedInCity" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.city" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportIsLocatedInCity.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportIsLocatedInCity.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="City">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportIsLocatedInCity.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportIsLocatedInCity.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> is located in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportIsLocatedInCity.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportServesMarket" GUID="875fc888-2a0a-4b46-b500-76a9d35d27c8" Name="AirportServesMarket" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.serves" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportServesMarket.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportServesMarket.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Market">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportServesMarket.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportServesMarket.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> serves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportServesMarket.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportHasAverageDepartureDelay" GUID="fe9507c4-2b75-4157-921f-fcc26706acf4" Name="AirportHasAverageDepartureDelay" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="true" IsStored="false" DerivationText="Delay == AVG[Flight.departure_delay WHERE Airport == Flight.route.departure GROUP BY Airport]" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.average_departure_delay" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportHasAverageDepartureDelay.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportHasAverageDepartureDelay.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Delay">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportHasAverageDepartureDelay.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportHasAverageDepartureDelay.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has average- departure</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportHasAverageDepartureDelay.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportCentersAtDegreesLongitude" GUID="e703fa10-0685-4e28-87ce-3067b55dee88" Name="AirportCentersAtDegreesLongitude" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.longitude" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportCentersAtDegreesLongitude.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportCentersAtDegreesLongitude.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DegreesLongitude">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportCentersAtDegreesLongitude.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportCentersAtDegreesLongitude.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> centers at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportCentersAtDegreesLongitude.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportHasAverageArrivalDelay" GUID="58fc17c7-6f77-4955-b35a-8ed3ae1f9de3" Name="AirportHasAverageArrivalDelay" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="true" IsStored="false" DerivationText="Delay == AVG[Flight.arrival_delay WHERE Airport == Flight.route.destination GROUP BY Airport]" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.average_arrival_delay" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportHasAverageArrivalDelay.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportHasAverageArrivalDelay.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Delay">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportHasAverageArrivalDelay.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportHasAverageArrivalDelay.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has average- arrival</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportHasAverageArrivalDelay.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AirportHasAirportName" GUID="139ebba8-c191-4bf5-bc09-0f114d9a0a26" Name="AirportHasAirportName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Airport.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AirportHasAirportName.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AirportHasAirportName.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="AirportName">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AirportHasAirportName.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AirportHasAirportName.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AirportHasAirportName.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="AircraftHasNameString" GUID="1d6cb370-51c7-45e9-a5a6-108a86ef4787" Name="AircraftHasNameString" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Aircraft.name" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="AircraftHasNameString.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Aircraft">
+            <ValueConstraint />
+          </Role>
+          <Role Id="AircraftHasNameString.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="String">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="AircraftHasNameString.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="AircraftHasNameString.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> has name</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="AircraftHasNameString.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+      <FactType Id="RouteConnectsToDepartureAirport" GUID="a134a123-9d5b-4221-9dc8-4edc8cde506f" Name="RouteConnectsToDepartureAirport" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <Aliases>
+          <Alias AliasType="Ossie" Alias="Route.departure" />
+        </Aliases>
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="RouteConnectsToDepartureAirport.Role1" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Route">
+            <ValueConstraint />
+          </Role>
+          <Role Id="RouteConnectsToDepartureAirport.Role2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Airport">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="RouteConnectsToDepartureAirport.Reading1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="RouteConnectsToDepartureAirport.Role1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText> connects to departure-</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="RouteConnectsToDepartureAirport.Role2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+      </FactType>
+    </FactTypes>
+    <RoleConstraints>
+      <RoleConstraint Id="CancelationReasonIsIdentifiedByCancelationCode.Role1.InternalUniquenessConstraint" GUID="668906f8-d14d-4704-9139-7d4412dc10d5" Name="CancelationReasonIsIdentifiedByCancelationCode.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CancelationReasonIsIdentifiedByCancelationCode.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="CancelationReasonIsIdentifiedByCancelationCode.Role2.InternalUniquenessConstraint" GUID="e28d60b3-8abb-4b11-9b5d-48e939e19448" Name="CancelationReasonIsIdentifiedByCancelationCode.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CancelationReasonIsIdentifiedByCancelationCode.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="CancelationReasonHasDescriptionString.Role1.InternalUniquenessConstraint" GUID="0a67285f-96d0-42b9-971d-bffe30eb00f3" Name="CancelationReasonHasDescriptionString.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CancelationReasonHasDescriptionString.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="StateIsIdentifiedByStateCode.Role1.InternalUniquenessConstraint" GUID="f7bddc72-a59f-4cac-82bf-2d037f3b78bf" Name="StateIsIdentifiedByStateCode.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="StateIsIdentifiedByStateCode.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="StateIsIdentifiedByStateCode.Role2.InternalUniquenessConstraint" GUID="ecb3a101-5f4f-4c59-9510-da136ea33076" Name="StateIsIdentifiedByStateCode.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="StateIsIdentifiedByStateCode.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="StateHasStateName.Role1.InternalUniquenessConstraint" GUID="a4865e93-e183-4c8d-a0b8-79b480b3155b" Name="StateHasStateName.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="StateHasStateName.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="CityHasCityName.Role1.InternalUniquenessConstraint" GUID="8e3cb98d-ff32-4abf-8e3e-efa93673b22b" Name="CityHasCityName.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CityHasCityName.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="CityIsLocatedInState.Role1.InternalUniquenessConstraint" GUID="dcbf5f55-7a0d-41b9-b284-c21589ee833a" Name="CityIsLocatedInState.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CityIsLocatedInState.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RunwayBelongsToAirport.Role1.InternalUniquenessConstraint" GUID="7eeb2abd-47fd-427d-b8a3-d4ca0676734a" Name="RunwayBelongsToAirport.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RunwayBelongsToAirport.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RunwayUsesRunwayDesignator.Role1.InternalUniquenessConstraint" GUID="d368e3a3-1682-4fcc-b0ed-63e38fae43fa" Name="RunwayUsesRunwayDesignator.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RunwayUsesRunwayDesignator.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RunwayHasRunwayLength.Role1.InternalUniquenessConstraint" GUID="035d4753-db0a-4f09-be1a-359993c5e897" Name="RunwayHasRunwayLength.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RunwayHasRunwayLength.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RunwayHasRunwayGeometry.Role1.InternalUniquenessConstraint" GUID="82f88216-444b-4616-9568-a66b518ab85f" Name="RunwayHasRunwayGeometry.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RunwayHasRunwayGeometry.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="ManufacturerIsIdentifiedByManufacturerName.Role1.InternalUniquenessConstraint" GUID="bde73ca1-94df-44df-8bec-72f58672d1ab" Name="ManufacturerIsIdentifiedByManufacturerName.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="ManufacturerIsIdentifiedByManufacturerName.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="ManufacturerIsIdentifiedByManufacturerName.Role2.InternalUniquenessConstraint" GUID="6ff04d56-dcad-4b7c-ac44-b33f7dee9e2f" Name="ManufacturerIsIdentifiedByManufacturerName.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="ManufacturerIsIdentifiedByManufacturerName.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="ModelHasModelName.Role1.InternalUniquenessConstraint" GUID="ff9b6cf0-837a-444b-9e10-df3abd2911fe" Name="ModelHasModelName.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="ModelHasModelName.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="ModelIsManufacturedByManufacturer.Role1.InternalUniquenessConstraint" GUID="dc16a880-93cd-4875-9692-72ea32cbdc0c" Name="ModelIsManufacturedByManufacturer.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="ModelIsManufacturedByManufacturer.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftHasSerialNr.Role1.InternalUniquenessConstraint" GUID="ae6a3e85-1fd8-4ba3-b13a-fef1bac47743" Name="AircraftHasSerialNr.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftHasSerialNr.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftHasNameString.Role1.InternalUniquenessConstraint" GUID="4c887317-de7a-4799-a812-7c4d1bec2543" Name="AircraftHasNameString.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftHasNameString.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftHasIntegerSeats.Role1.InternalUniquenessConstraint" GUID="228f9711-15d9-4c67-9985-7b96c732208e" Name="AircraftHasIntegerSeats.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftHasIntegerSeats.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftIsIdentifiedByTailNr.Role1.InternalUniquenessConstraint" GUID="59f5395f-edfc-4e3f-9221-ed3680da3a13" Name="AircraftIsIdentifiedByTailNr.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftIsIdentifiedByTailNr.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftIsIdentifiedByTailNr.Role2.InternalUniquenessConstraint" GUID="8ace30f0-5002-4040-9569-e05f3e35c7f7" Name="AircraftIsIdentifiedByTailNr.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftIsIdentifiedByTailNr.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftHasModel.Role1.InternalUniquenessConstraint" GUID="be1e4f91-086c-4039-8125-df331f092fce" Name="AircraftHasModel.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftHasModel.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftWasManufacturedInYear.Role1.InternalUniquenessConstraint" GUID="85daa794-77a6-4384-b14a-3576398705d1" Name="AircraftWasManufacturedInYear.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftWasManufacturedInYear.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftHasCapacity.Role1.InternalUniquenessConstraint" GUID="80ec0a8d-0d4f-4528-a85f-1ea469703f17" Name="AircraftHasCapacity.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftHasCapacity.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AircraftIsOperatedByCarrier.Role1.InternalUniquenessConstraint" GUID="7309b3a3-587a-45da-adcf-d4d843c3f0fb" Name="AircraftIsOperatedByCarrier.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AircraftIsOperatedByCarrier.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportIsLocatedInCity.Role1.InternalUniquenessConstraint" GUID="741374a4-afb1-4937-8583-cf7cc56440e9" Name="AirportIsLocatedInCity.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportIsLocatedInCity.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportServesMarket.Role1.InternalUniquenessConstraint" GUID="3905d78a-f8ee-4e33-9075-facb0f182e3b" Name="AirportServesMarket.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportServesMarket.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportHasAverageDepartureDelay.Role1.InternalUniquenessConstraint" GUID="5f8da3bf-e072-4991-a2a1-2be085c6e98e" Name="AirportHasAverageDepartureDelay.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportHasAverageDepartureDelay.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportCentersAtDegreesLongitude.Role1.InternalUniquenessConstraint" GUID="0d56263a-456f-413c-97ef-3efe28afe2b8" Name="AirportCentersAtDegreesLongitude.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportCentersAtDegreesLongitude.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportHasAverageArrivalDelay.Role1.InternalUniquenessConstraint" GUID="a7fca009-ccd3-4b98-a546-828eab1465a7" Name="AirportHasAverageArrivalDelay.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportHasAverageArrivalDelay.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportHasAirportName.Role1.InternalUniquenessConstraint" GUID="ce649379-ceca-4fe0-8809-8b0f97179e49" Name="AirportHasAirportName.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportHasAirportName.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportHasAirportCode.Role1.InternalUniquenessConstraint" GUID="0dd4ffab-031f-4d50-81ad-41cdc455977c" Name="AirportHasAirportCode.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportHasAirportCode.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportHasAirportCode.Role2.InternalUniquenessConstraint" GUID="c4b2c1da-8de0-40f4-96f0-cbc741a7a712" Name="AirportHasAirportCode.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportHasAirportCode.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="AirportCentersAtDegreesLatitude.Role1.InternalUniquenessConstraint" GUID="0f1c9807-a7c1-4a17-8822-af61c796696a" Name="AirportCentersAtDegreesLatitude.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="AirportCentersAtDegreesLatitude.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="MarketIsIdentifiedByMarketName.Role1.InternalUniquenessConstraint" GUID="9bbce054-6125-4f70-a4c6-5f4617b7285b" Name="MarketIsIdentifiedByMarketName.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="MarketIsIdentifiedByMarketName.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="MarketIsIdentifiedByMarketName.Role2.InternalUniquenessConstraint" GUID="4b96b13a-a00d-455c-80b1-a15b67716ac9" Name="MarketIsIdentifiedByMarketName.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="MarketIsIdentifiedByMarketName.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightHasDepartureDelay.Role1.InternalUniquenessConstraint" GUID="0652deb6-9733-4e9b-a297-62768913d01f" Name="FlightHasDepartureDelay.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightHasDepartureDelay.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightHasFlightNr.Role1.InternalUniquenessConstraint" GUID="43c52922-632e-40e3-a02c-1a0b3ef47a86" Name="FlightHasFlightNr.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightHasFlightNr.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightIsScheduledToDepartAtDateTime.Role1.InternalUniquenessConstraint" GUID="58af344f-b1be-440c-adbe-01f7ab613121" Name="FlightIsScheduledToDepartAtDateTime.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightIsScheduledToDepartAtDateTime.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightHasArrivalDelay.Role1.InternalUniquenessConstraint" GUID="900f12ec-fa91-4758-aa73-d7a6d77f32be" Name="FlightHasArrivalDelay.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightHasArrivalDelay.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightWasCanceledDueToCancelationReason.Role1.InternalUniquenessConstraint" GUID="e8007256-0036-4714-88ee-aa825e397944" Name="FlightWasCanceledDueToCancelationReason.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightWasCanceledDueToCancelationReason.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightSpansActualDistance.Role1.InternalUniquenessConstraint" GUID="915c18a6-868b-499c-ad3b-bf09bc436fa0" Name="FlightSpansActualDistance.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightSpansActualDistance.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightIsIdentifiedByFlightId.Role1.InternalUniquenessConstraint" GUID="e71e1768-33b9-46d2-881b-74116a49e480" Name="FlightIsIdentifiedByFlightId.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightIsIdentifiedByFlightId.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightIsIdentifiedByFlightId.Role2.InternalUniquenessConstraint" GUID="fba22700-eac3-4133-8030-0a911cebc47a" Name="FlightIsIdentifiedByFlightId.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightIsIdentifiedByFlightId.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightIsScheduledToArriveAtDateTime.Role1.InternalUniquenessConstraint" GUID="d16fb43c-7266-42af-8e7b-91451c013198" Name="FlightIsScheduledToArriveAtDateTime.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightIsScheduledToArriveAtDateTime.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightAtDateTimeRegistersDegreesLongitude.Role1.InternalUniquenessConstraint" GUID="fc9588cb-f936-4cb1-b567-a718b3572330" Name="FlightAtDateTimeRegistersDegreesLongitude.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightAtDateTimeRegistersDegreesLongitude.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightAtDateTimeRegistersDegreesLatitude.Role1.InternalUniquenessConstraint" GUID="1188ddbe-e76f-4bda-a6c4-b170c435148f" Name="FlightAtDateTimeRegistersDegreesLatitude.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightAtDateTimeRegistersDegreesLatitude.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightIsScheduledToDepartOnDate.Role1.InternalUniquenessConstraint" GUID="c96ab5d8-e0da-4c04-87f4-19159fe2100e" Name="FlightIsScheduledToDepartOnDate.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightIsScheduledToDepartOnDate.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightDepartsAtDateTime.Role1.InternalUniquenessConstraint" GUID="8a06ed6c-5065-4a3b-a24d-6087c8fd12de" Name="FlightDepartsAtDateTime.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightDepartsAtDateTime.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightArrivesAtDateTime.Role1.InternalUniquenessConstraint" GUID="a25c3005-8ea2-4bdb-9a61-076ac27d7554" Name="FlightArrivesAtDateTime.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightArrivesAtDateTime.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightTraversesRoute.Role1.InternalUniquenessConstraint" GUID="fa30d765-4dcc-4959-8faa-89173a31143b" Name="FlightTraversesRoute.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightTraversesRoute.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightUsesAircraft.Role1.InternalUniquenessConstraint" GUID="b0d5974b-31a3-41e6-bb68-8de45b5829a6" Name="FlightUsesAircraft.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightUsesAircraft.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="FlightIsOperatedByCarrier.Role1.InternalUniquenessConstraint" GUID="d2f1e63b-21ac-48be-a62f-67c50077bc4a" Name="FlightIsOperatedByCarrier.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="FlightIsOperatedByCarrier.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="CarrierUsesCarrierCode.Role1.InternalUniquenessConstraint" GUID="78db2000-11c5-4952-85ff-ed605d6d09cf" Name="CarrierUsesCarrierCode.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CarrierUsesCarrierCode.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="CarrierUsesCarrierCode.Role2.InternalUniquenessConstraint" GUID="d08e5020-2243-4962-b78a-4e9bbd911d1e" Name="CarrierUsesCarrierCode.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CarrierUsesCarrierCode.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="CarrierHasCarrierName.Role1.InternalUniquenessConstraint" GUID="33ebfa00-afb6-4c88-a821-874a77113ffe" Name="CarrierHasCarrierName.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CarrierHasCarrierName.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteHasAverageDepartureDelay.Role1.InternalUniquenessConstraint" GUID="4f269234-3421-43ff-8acb-0c2c8b4a669c" Name="RouteHasAverageDepartureDelay.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteHasAverageDepartureDelay.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteHasAverageArrivalDelay.Role1.InternalUniquenessConstraint" GUID="47b458b5-6c2e-43c0-be95-ce713cf4f321" Name="RouteHasAverageArrivalDelay.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteHasAverageArrivalDelay.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteSpansDistance.Role1.InternalUniquenessConstraint" GUID="cbdf16fa-4a11-48ad-8a5e-325bf18de51b" Name="RouteSpansDistance.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteSpansDistance.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteHasDistanceGroup.Role1.InternalUniquenessConstraint" GUID="800ed43d-cc26-4976-b00a-13a0fcbf807a" Name="RouteHasDistanceGroup.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteHasDistanceGroup.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteIsIdentifiedByRouteId.Role1.InternalUniquenessConstraint" GUID="158d7bf4-c675-4b82-9f66-bbee5e2b3289" Name="RouteIsIdentifiedByRouteId.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteIsIdentifiedByRouteId.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteIsIdentifiedByRouteId.Role2.InternalUniquenessConstraint" GUID="c129f672-2f80-4b6d-8b3f-f2f1036a0850" Name="RouteIsIdentifiedByRouteId.Role2.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteIsIdentifiedByRouteId.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteHasNameString.Role1.InternalUniquenessConstraint" GUID="025adfb2-1d6d-4fde-9bd8-0a2b7009ebdc" Name="RouteHasNameString.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteHasNameString.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteConnectsToDestinationAirport.Role1.InternalUniquenessConstraint" GUID="c749602e-bdb6-424c-a7a5-76ba2e715a59" Name="RouteConnectsToDestinationAirport.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteConnectsToDestinationAirport.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RouteConnectsToDepartureAirport.Role1.InternalUniquenessConstraint" GUID="df0f6585-536d-4874-9cf6-0c7b3eee6901" Name="RouteConnectsToDepartureAirport.Role1.InternalUniquenessConstraint" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RouteConnectsToDepartureAirport.Role1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="City.ExternalUniquenessConstraint" GUID="31fcd2d4-45f3-42d0-8885-e3892349cbec" Name="City.ExternalUniquenessConstraint" RoleConstraintType="ExternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="CityHasCityName.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="CityIsLocatedInState.Role2" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="Runway.ExternalUniquenessConstraint" GUID="bbd8d232-a0ce-49fa-9e4e-7631c605ef0c" Name="Runway.ExternalUniquenessConstraint" RoleConstraintType="ExternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="RunwayUsesRunwayDesignator.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="RunwayBelongsToAirport.Role2" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="Model.ExternalUniquenessConstraint" GUID="bb43f2b6-ff6f-46e9-ab30-a98c8fee69b6" Name="Model.ExternalUniquenessConstraint" RoleConstraintType="ExternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOREqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="ModelHasModelName.Role2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="ModelIsManufacturedByManufacturer.Role2" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+    </RoleConstraints>
+    <ModelNotes />
+  </ORMModel>
+  <ORMDiagram />
+</Model>

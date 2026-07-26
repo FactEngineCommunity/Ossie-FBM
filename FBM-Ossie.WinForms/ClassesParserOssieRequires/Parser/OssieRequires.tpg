@@ -1,0 +1,101 @@
+//
+// Apache Ossie "requires" expression grammar.
+//
+// The top-level productions deliberately use the corresponding FBM/ORM
+// constraint type names so that the generated parse tree can be translated
+// directly to FBM.Model.RoleConstraint objects.
+//
+
+<% @TinyPG Namespace="OssieRequires" Language="vb"%>
+<% @TextHighlighter Generate="true" %>
+
+//Keywords
+[Color(0, 0, 255)] KEYWDAND       -> @"AND\b";
+[Color(0, 0, 255)] KEYWDCOUNT     -> @"COUNT\b";
+[Color(0, 0, 255)] KEYWDFALSE     -> @"FALSE\b";
+[Color(0, 0, 255)] KEYWDNOT       -> @"NOT\b";
+[Color(0, 0, 255)] KEYWDOR        -> @"OR\b";
+[Color(0, 0, 255)] KEYWDTRUE      -> @"TRUE\b";
+
+//Operators and punctuation
+[Color(135, 207, 243)] EQUALS                 -> @"==";
+[Color(135, 207, 243)] NOTEQUALS              -> @"!=";
+[Color(135, 207, 243)] LESSTHANOREQUALS       -> @"<=";
+[Color(135, 207, 243)] GREATERTHANOREQUALS    -> @">=";
+[Color(135, 207, 243)] LESSTHAN               -> @"<";
+[Color(135, 207, 243)] GREATERTHAN            -> @">";
+[Color(135, 207, 243)] COMMA                   -> @",";
+[Color(135, 207, 243)] PERIOD                  -> @"\.";
+[Color(135, 207, 243)] BROPEN                  -> @"\(";
+[Color(135, 207, 243)] BRCLOSE                 -> @"\)";
+[Color(135, 207, 243)] SQUAREBRACKETOPEN      -> @"\[";
+[Color(135, 207, 243)] SQUAREBRACKETCLOSE     -> @"\]";
+
+//Values and model-element names
+[Color(153, 76, 0)] STRINGLITERAL       -> @"'[^']*'";
+[Color(153, 76, 0)] NUMBERLITERAL       -> @"-?[0-9]+(\.[0-9]+)?";
+[Color(76, 153, 0)] MODELELEMENTNAME    -> @"[A-Za-z_][A-Za-z0-9_\-]*";
+
+EOF -> @"^$";
+
+//Model-element references
+QUALIFIEDMODELELEMENTNAME -> MODELELEMENTNAME PERIOD MODELELEMENTNAME
+                             (PERIOD MODELELEMENTNAME)*;
+MODELELEMENTREFERENCE     -> QUALIFIEDMODELELEMENTNAME | MODELELEMENTNAME;
+RELATIONSHIPINVOCATION    -> QUALIFIEDMODELELEMENTNAME BROPEN
+                             MODELELEMENTREFERENCE
+                             (COMMA MODELELEMENTREFERENCE)*
+                             BRCLOSE;
+
+//Value clauses
+BOOLEANLITERAL             -> KEYWDTRUE | KEYWDFALSE;
+LITERAL                    -> STRINGLITERAL | NUMBERLITERAL | BOOLEANLITERAL;
+EQUALITYOPERATOR           -> EQUALS | NOTEQUALS;
+ORDERINGOPERATOR           -> LESSTHANOREQUALS | GREATERTHANOREQUALS
+                              | LESSTHAN | GREATERTHAN;
+COMPARISONOPERATOR         -> EQUALITYOPERATOR | ORDERINGOPERATOR;
+
+VALUEEQUALITYCLAUSE        -> MODELELEMENTREFERENCE EQUALITYOPERATOR LITERAL
+                              | LITERAL EQUALITYOPERATOR MODELELEMENTREFERENCE;
+VALUEBOUNDCLAUSE           -> MODELELEMENTREFERENCE ORDERINGOPERATOR LITERAL
+                              | LITERAL ORDERINGOPERATOR MODELELEMENTREFERENCE;
+ROLECOMPARISONCLAUSE       -> QUALIFIEDMODELELEMENTNAME COMPARISONOPERATOR
+                              QUALIFIEDMODELELEMENTNAME;
+ROLEVALUECLAUSE            -> ROLECOMPARISONCLAUSE
+                              | VALUEEQUALITYCLAUSE
+                              | VALUEBOUNDCLAUSE;
+
+//AND binds more tightly than OR. Parentheses may override that precedence.
+ROLEVALUEPRIMARYEXPRESSION -> ROLEVALUECLAUSE
+                              | BROPEN ROLEVALUEOREXPRESSION BRCLOSE;
+ROLEVALUEANDEXPRESSION     -> ROLEVALUEPRIMARYEXPRESSION
+                              (KEYWDAND ROLEVALUEPRIMARYEXPRESSION)*;
+ROLEVALUEOREXPRESSION      -> ROLEVALUEANDEXPRESSION
+                              (KEYWDOR ROLEVALUEANDEXPRESSION)*;
+
+//FBM/ORM constraint types
+CARDINALITYCONSTRAINT      -> KEYWDCOUNT SQUAREBRACKETOPEN
+                              MODELELEMENTREFERENCE
+                              SQUAREBRACKETCLOSE
+                              COMPARISONOPERATOR NUMBERLITERAL;
+
+EXCLUSIONCONSTRAINT        -> KEYWDNOT RELATIONSHIPINVOCATION;
+
+SUBSETCONSTRAINT           -> RELATIONSHIPINVOCATION;
+
+ROLEVALUECONSTRAINT        -> ROLEVALUEOREXPRESSION;
+
+//Mandatory is represented by FBM.Role.Mandatory rather than RoleConstraint.
+MANDATORYCONSTRAINT        -> QUALIFIEDMODELELEMENTNAME;
+
+//Specific alternatives precede general alternatives for ordered backtracking.
+REQUIRESCONSTRAINT         -> EXCLUSIONCONSTRAINT
+                              | CARDINALITYCONSTRAINT
+                              | SUBSETCONSTRAINT
+                              | ROLEVALUECONSTRAINT
+                              | MANDATORYCONSTRAINT;
+
+[Skip] WHITESPACE -> @"\s+";
+
+Start -> REQUIRESCONSTRAINT
+         EOF;

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Ossie ontology view screenshot placeholder</title>
+  <desc id="description">Replace this file with a screenshot of the Ossie ontology tree.</desc>
+  <rect width="1200" height="675" fill="#f4f7fb"/>
+  <rect x="55" y="55" width="1090" height="565" rx="18" fill="#fff" stroke="#2d5b88" stroke-width="4"/>
+  <rect x="55" y="55" width="1090" height="58" rx="18" fill="#173b5e"/>
+  <text x="600" y="92" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="24" fill="#fff">FBM-Ossie — Ossie Ontology</text>
+  <rect x="90" y="150" width="720" height="415" rx="10" fill="#f8fafc" stroke="#c8d4e2" stroke-width="2"/>
+  <g font-family="Consolas, monospace" font-size="23" fill="#26384a">
+    <text x="125" y="205">▾ Ontology</text>
+    <text x="165" y="255">▾ Concept: Airport</text>
+    <text x="205" y="305">• relationship: code</text>
+    <text x="205" y="355">• relationship: latitude</text>
+    <text x="165" y="405">▸ Concept: Flight</text>
+    <text x="165" y="455">▸ Concept: Route</text>
+    <text x="125" y="515">▸ Ontology mappings</text>
+  </g>
+  <rect x="850" y="150" width="260" height="415" rx="10" fill="#eaf2fa"/>
+  <text x="980" y="300" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="600" fill="#173b5e">SCREENSHOT</text>
+  <text x="980" y="342" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="600" fill="#173b5e">PLACEHOLDER</text>
+  <text x="980" y="410" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="18" fill="#415d78">Replace with the</text>
+  <text x="980" y="440" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="18" fill="#415d78">Ossie tree view</text>
+</svg>

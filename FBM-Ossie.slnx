@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="FBM-Ossie/FBM-Ossie.vbproj" />
+  <Project Path="FBM-Ossie.Verification/FBM-Ossie.Verification.csproj" />
+  <Project Path="FBM-Ossie.WinForms/FBM-Ossie.WinForms.vbproj" />
+</Solution>
